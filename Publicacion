@@ -1,0 +1,23 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entregable1;
+import entregable1.Fecha;
+
+
+/**
+ *
+ * @author p.hernandez.lazaro
+ */
+
+public class Publicacion {
+    private long fecha;
+    private String texto;
+    
+    public String toString(){
+        String fechaString=Fecha.fechaNumericaString(fecha);
+        return fechaString+"->"+texto;
+        
+    }
+}
