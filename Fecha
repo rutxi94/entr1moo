@@ -1,0 +1,50 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entregable1;
+
+import java.util.Calendar;
+
+/**
+ * Una clase que os damos ya hecha, que implementa ciertas funciones para gestionar
+ * fechas que os pueden ser de ayuda durante la programación de la aplicación.
+ * @author Mario
+ */
+public abstract class Fecha {
+    private Fecha() {}
+ 
+
+
+    /**
+     * Retorna la fecha y hora del momento en que se ha llamado a este método.
+     * @return Tiempo en formato numérico del tipo AAAAMMDDHHMM
+     *             (AAAA: año, MM: mes, DD: día, HH: hora, MM: minuto).
+     *             Por ejemplo, el 4 de febrero de 2013 a las 9:30 a.m.
+     *             se representaría como 201302040930
+     */
+    public static long getFechaActual() {
+        Calendar c = Calendar.getInstance();
+        long fecha = c.get(Calendar.YEAR);
+        fecha = fecha * 100 + c.get(Calendar.MONTH);
+        fecha = fecha * 100 + c.get(Calendar.DAY_OF_MONTH);
+        fecha = fecha * 100 + c.get(Calendar.HOUR_OF_DAY);
+        fecha = fecha * 100 + c.get(Calendar.MINUTE);
+        return fecha;
+    }
+
+    /**
+     * Convierte una fecha en formato numérico AAAAMMDDHHMM a un String
+     * con la fecha formateada como: DD/MM/AAAA – HH:MM.
+     * @param fecha Un 'long' con la fecha en formato AAAAMMDDHHMM
+     * @return Un String con la fecha formateada como: DD/MM/AAAA – HH:MM.
+     */
+    public static String fechaNumericaString(long fecha) {
+        return (fecha/10000)%100
+                + "/" + (fecha/1000000)%100
+                + "/" + (fecha/100000000)
+                + " - " + (fecha/100) % 100
+                + ":" + (fecha%100);
+
+    }
+}
