@@ -1,0 +1,54 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package entregable1;
+import java.util.Scanner;
+
+/**
+ *
+ * @author p.hernandez.lazaro
+ */
+public class RedProfesional {
+    
+    public static String leerLinea(){
+        Scanner lector = new Scanner(System.in);
+        return lector.nextLine();
+        
+        
+    }
+    public static void main (String args[]){
+        System.out.println("Hola, bienvenido a ENTREGABLE1, la nueva red social, made in UPC madafacka!!");
+        System.out.println("Introduce tu puto nombre: ");
+        
+        
+        if("contactos".compareTo(leerLinea())==0){
+            
+            
+        }
+        if("publicaciones".compareTo(leerLinea())==0){
+            
+            
+        }
+        //En aquesta ens hem de mirar be la condicio d'entrada, pq aixi no xuta
+        /*if("publicaciones"+persona.compareTo(leerLinea())==0){
+            
+            
+        }*/
+        if("contactos".compareTo(leerLinea())==0){
+            
+            
+        }
+        if("ayuda".compareTo(leerLinea())==0){
+            
+            
+        }
+        if("salir".compareTo(leerLinea())==0){
+            
+            
+        }
+        
+    }
+    
+    
+}
