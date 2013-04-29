@@ -18,6 +18,11 @@ public class RedProfesional {
         
     }
     public static void main (String args[]){
+        
+        Persona persona=new Persona();
+        Publicacion publicacio=new Publicacion();
+
+
         System.out.println("Hola, bienvenido a ENTREGABLE1, la nueva red social, made in UPC madafacka!!");
         System.out.println("Introduce tu puto nombre: ");
         
@@ -30,11 +35,23 @@ public class RedProfesional {
             
             
         }
-        //En aquesta ens hem de mirar be la condicio d'entrada, pq aixi no xuta
-        /*if("publicaciones"+persona.compareTo(leerLinea())==0){
+        if(persona.buscarContacto(persona.getNombre())){    //La idea d'aquesta linea es asegurarse que el nom esta 
+                                                            //a la llista de contactos, i si no, no entraries, pero sha de revisar :p
+            
+                
+            if(("publicaciones"+persona.getNombre()).compareTo(leerLinea())==0) {
+                
+            }else{
+                System.out.println("Esta persona no está en tu lista de contactos");
+            }
             
             
-        }*/
+        }
+        if(("publicar"+publicacio.toString()).compareTo(leerLinea())==0){
+            
+        }
+
+
         if("contactos".compareTo(leerLinea())==0){
             
             
