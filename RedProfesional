@@ -4,12 +4,16 @@
  */
 package entregable1;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.TreeMap;
+
 
 /**
  *
  * @author p.hernandez.lazaro
  */
 public class RedProfesional {
+    
     
     public static String leerLinea(){
         Scanner lector = new Scanner(System.in);
@@ -18,54 +22,65 @@ public class RedProfesional {
         
     }
     public static void main (String args[]){
-        
-        Persona persona=new Persona();
+      Persona persona=new Persona();
         Publicacion publicacio=new Publicacion();
-
-
+        String nombre=new String();
+         String puesto=new String();
+         String empresa=new String();
+         TreeMap<String,Persona>contactes;
+         ArrayList<Publicacion>publica;
+        // No se si he d'instanciar tot aixo
+         String comanda="";
+        
         System.out.println("Hola, bienvenido a ENTREGABLE1, la nueva red social, made in UPC madafacka!!");
         System.out.println("Introduce tu puto nombre: ");
         
         
+        
+        while(!comanda.equalsIgnoreCase("salir")){
+      
         if("contactos".compareTo(leerLinea())==0){
-            
+            while(persona.iteradorContactos().hasNext()){
+                System.out.println(persona.iteradorContactos().next());
+            }
             
         }
         if("publicaciones".compareTo(leerLinea())==0){
+          //System.out.println(persona.publica.listIterator()); 
             
             
         }
-        if(persona.buscarContacto(persona.getNombre())){    //La idea d'aquesta linea es asegurarse que el nom esta 
-                                                            //a la llista de contactos, i si no, no entraries, pero sha de revisar :p
+        if(("publicaciones"+persona.getNombre()).compareTo(leerLinea())==0) {
+            while (persona.iteradorContactos().hasNext()){ 
+                Persona pers=persona.iteradorContactos().next();
+                if(persona.getNombre().equalsIgnoreCase(pers.getNombre())){
+                    
+                }
+                
             
                 
-            if(("publicaciones"+persona.getNombre()).compareTo(leerLinea())==0) {
-                
-            }else{
-                System.out.println("Esta persona no está en tu lista de contactos");
             }
+    }
+    
             
             
-        }
+    
         if(("publicar"+publicacio.toString()).compareTo(leerLinea())==0){
             
         }
-
-
-        if("contactos".compareTo(leerLinea())==0){
-            
-            
-        }
+        
+        
         if("ayuda".compareTo(leerLinea())==0){
             
             
         }
         if("salir".compareTo(leerLinea())==0){
             
+            System.out.print("Cerrando el programa...");
             
         }
         
     }
-    
-    
+    }
 }
+
