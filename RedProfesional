@@ -22,7 +22,7 @@ public class RedProfesional {
     }
     public static void main (String args[]){
         
-        Persona persona=new Persona();
+        
         Publicacion publicacio=new Publicacion();
         String nombre=new String();
         String puesto=new String();
@@ -32,14 +32,17 @@ public class RedProfesional {
 
         System.out.println("Hola, bienvenido a ENTREGABLE1, la nueva red social, made in UPC madafacka!!");
         System.out.println("Introduce tu puto nombre: ");
-        nombre=persona.getNombre();
+        
         nombre=leerLinea();
         System.out.println("Donde trabajas?");
-        puesto=persona.getPuesto();
+        
         puesto=leerLinea();
         System.out.println("En que empresa?");
-        empresa=persona.getEmpresa();
+        
         empresa=leerLinea();
+        
+        Persona persona=new Persona(nombre,puesto,empresa);
+        
         
         
         System.out.println("Escoge una opcion: ");
