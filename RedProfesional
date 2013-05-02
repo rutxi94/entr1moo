@@ -3,7 +3,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package Entregable1;
+package entregable1;
 import java.util.Scanner;
 import java.util.TreeMap;
 import java.util.ArrayList;
@@ -48,6 +48,8 @@ public class RedProfesional {
             System.out.println("'publicar': para publicar una nueva publicacion.");
             System.out.println("'ayuda': para mostrar la ayuda (again).");
             System.out.println("'salir': para salir de la red.");
+            System.out.println("-----");
+            System.out.print("> ");
         
         
         String var=leerLinea();
@@ -59,7 +61,7 @@ public class RedProfesional {
         if("contactos".compareTo(var)==0){
             while(persona.iteradorContactos().hasNext()){
                 System.out.println(persona.iteradorContactos().next());
-            } 
+            }
             
         }
         if("publicaciones".compareTo(var)==0){
@@ -69,7 +71,7 @@ public class RedProfesional {
             
                 
         if(("publicaciones "+persona.getNombre()).compareTo(var)==0) {
-             while (persona.iteradorContactos().hasNext()){ 
+             while (persona.iteradorContactos().hasNext()){
                 Persona pers=persona.iteradorContactos().next();
                 if(persona.getNombre().equalsIgnoreCase(pers.getNombre())){
                     
@@ -95,7 +97,8 @@ public class RedProfesional {
             
             
         }
-        System.out.println("comanda:>");
+        System.out.println("-----");
+        System.out.print("> ");
         var=leerLinea();
         }
     
