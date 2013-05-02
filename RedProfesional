@@ -57,7 +57,9 @@ public class RedProfesional {
             
         
         if("contactos".compareTo(var)==0){
-            
+            while(persona.iteradorContactos().hasNext()){
+                System.out.println(persona.iteradorContactos().next());
+            } 
             
         }
         if("publicaciones".compareTo(var)==0){
