@@ -1,19 +1,18 @@
 /*
+/*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package entregable1;
+package Entregable1;
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.TreeMap;
-
+import java.util.ArrayList;
 
 /**
  *
  * @author p.hernandez.lazaro
  */
 public class RedProfesional {
-    
     
     public static String leerLinea(){
         Scanner lector = new Scanner(System.in);
@@ -22,65 +21,81 @@ public class RedProfesional {
         
     }
     public static void main (String args[]){
-      Persona persona=new Persona();
+        
+        Persona persona=new Persona();
         Publicacion publicacio=new Publicacion();
         String nombre=new String();
-         String puesto=new String();
-         String empresa=new String();
-         TreeMap<String,Persona>contactes;
-         ArrayList<Publicacion>publica;
-        // No se si he d'instanciar tot aixo
-         String comanda="";
-        
+        String puesto=new String();
+        String empresa=new String();
+        TreeMap<String,Persona>contactes;
+        ArrayList<Publicacion>publica;
+
         System.out.println("Hola, bienvenido a ENTREGABLE1, la nueva red social, made in UPC madafacka!!");
         System.out.println("Introduce tu puto nombre: ");
+        nombre=persona.getNombre();
+        nombre=leerLinea();
+        System.out.println("Donde trabajas?");
+        puesto=persona.getPuesto();
+        puesto=leerLinea();
+        System.out.println("En que empresa?");
+        empresa=persona.getEmpresa();
+        empresa=leerLinea();
         
         
+        System.out.println("Escoge una opcion: ");
+            System.out.println("'contactos': para ver la lista de contactos.");
+            System.out.println("'publicaciones': para ver las publiaciones de un contacto.");
+            System.out.println("'publicar': para publicar una nueva publicacion.");
+            System.out.println("'ayuda': para mostrar la ayuda (again).");
+            System.out.println("'salir': para salir de la red.");
         
-        while(!comanda.equalsIgnoreCase("salir")){
-      
-        if("contactos".compareTo(leerLinea())==0){
-            while(persona.iteradorContactos().hasNext()){
-                System.out.println(persona.iteradorContactos().next());
-            }
+        
+        String var=leerLinea();
+        while (!"salir".equals(var))
+        {
+         
+            
+        
+        if("contactos".compareTo(var)==0){
+            
             
         }
-        if("publicaciones".compareTo(leerLinea())==0){
-          //System.out.println(persona.publica.listIterator()); 
+        if("publicaciones".compareTo(var)==0){
             
             
         }
-        if(("publicaciones"+persona.getNombre()).compareTo(leerLinea())==0) {
-            while (persona.iteradorContactos().hasNext()){ 
+            
+                
+        if(("publicaciones "+persona.getNombre()).compareTo(var)==0) {
+             while (persona.iteradorContactos().hasNext()){ 
                 Persona pers=persona.iteradorContactos().next();
                 if(persona.getNombre().equalsIgnoreCase(pers.getNombre())){
                     
                 }
-                
+             }
+        }
             
-                
-            }
-    }
+            
+       
+        if(("publicar"+publicacio.toString()).compareTo(var)==0){
+            
+            
+        }
+
+        if("ayuda".compareTo(var)==0){
+            System.out.println("Escoge una opcion: ");
+            System.out.println("'contactos': para ver la lista de contactos.");
+            System.out.println("'publicaciones': para ver las publiaciones de un contacto.");
+            System.out.println("'publicar': para publicar una nueva publicacion.");
+            System.out.println("'ayuda': para mostrar la ayuda (again).");
+            System.out.println("'salir': para salir de la red.");
+            
+            
+            
+        }
+        System.out.println("comanda:>");
+        var=leerLinea();
+        }
     
-            
-            
-    
-        if(("publicar"+publicacio.toString()).compareTo(leerLinea())==0){
-            
-        }
-        
-        
-        if("ayuda".compareTo(leerLinea())==0){
-            
-            
-        }
-        if("salir".compareTo(leerLinea())==0){
-            
-            System.out.print("Cerrando el programa...");
-            
-        }
-        
-    }
     }
 }
-
