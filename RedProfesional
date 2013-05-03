@@ -14,7 +14,7 @@ import java.util.Iterator;
  *
  * @author p.hernandez.lazaro
  */
-public class RedProfessional{ 
+public class RedProfesional{ 
     
     public static String leerLinea(){
         Scanner lector = new Scanner(System.in);
@@ -38,12 +38,13 @@ public class RedProfessional{
         System.out.println("¿Cómo te llamas?");
         
         nombre=leerLinea();
-        System.out.println("¿Dónde trabajas?");
-        
-        puesto=leerLinea();
-        System.out.println("¿En qué empresa?");
+        System.out.println("¿En qué empresa trabajas?");
         
         empresa=leerLinea();
+        System.out.println("¿En que puesto?");
+        
+        puesto=leerLinea();
+        
         
         
         Persona persona=new Persona(nombre,puesto,empresa);
@@ -82,6 +83,7 @@ public class RedProfessional{
         System.out.println("Hola "+nombre+",\n"+"¿Qué quieres hacer?");
             System.out.println("'contactos': para ver la lista de contactos.");
             System.out.println("'publicaciones': para ver las publiaciones de un contacto.");
+            System.out.println("'publicaciones+contacto': para ver las publicaciones de un contacto concreto.");
             System.out.println("'publicar': para publicar una nueva publicacion.");
             System.out.println("'ayuda': para mostrar la ayuda (again).");
             System.out.println("'salir': para salir de la red.");
@@ -150,7 +152,7 @@ public class RedProfessional{
         if("ayuda".compareTo(var)==0){
             System.out.println("Escoge una opcion: ");
             System.out.println("'contactos': para ver la lista de contactos.");
-            System.out.println("'publicaciones': para ver las publiaciones de un contacto.");
+            System.out.println("'publicaciones': para ver las publicaciones de un contacto.");
             System.out.println("'publicar': para publicar una nueva publicacion.");
             System.out.println("'ayuda': para mostrar la ayuda (again).");
             System.out.println("'salir': para salir de la red.");
