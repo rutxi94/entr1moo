@@ -15,6 +15,11 @@ public class Publicacion {
     private long fecha;
     private String texto;
     
+    public Publicacion(long fecha, String texto){
+        fecha=this.fecha;
+        texto=this.texto;
+    }
+    
     public String toString(){
         String fechaString=Fecha.fechaNumericaString(fecha);
         return fechaString+"->"+texto;
