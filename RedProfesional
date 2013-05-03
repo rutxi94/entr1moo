@@ -1,3 +1,4 @@
+
 /*
 /*
  * To change this template, choose Tools | Templates
@@ -13,7 +14,7 @@ import java.util.Iterator;
  *
  * @author p.hernandez.lazaro
  */
-public class RedProfessional{
+public class RedProfessional{ 
     
     public static String leerLinea(){
         Scanner lector = new Scanner(System.in);
@@ -29,17 +30,18 @@ public class RedProfessional{
         String puesto=new String();
         String empresa=new String();
         String texto=new String();
+        
         TreeMap<String,Persona>contactos=new TreeMap();
         ArrayList<Publicacion>publica=new ArrayList();
 
-        System.out.println("Hola, bienvenido a ENTREGABLE1, la nueva red social, made in UPC madafacka!!");
-        System.out.println("Introduce tu puto nombre: ");
+        System.out.println("Bienvenido, si quieres darte de alta sigue los pasos, y recuerda, escribe \"ayuda\" si no sabes que hacer");
+        System.out.println("¿Cómo te llamas?");
         
         nombre=leerLinea();
-        System.out.println("Donde trabajas?");
+        System.out.println("¿Dónde trabajas?");
         
         puesto=leerLinea();
-        System.out.println("En que empresa?");
+        System.out.println("¿En qué empresa?");
         
         empresa=leerLinea();
         
@@ -59,6 +61,14 @@ public class RedProfessional{
        contactos.put("Astérix", contacto4);
        contactos.put("Capitán Trueno", contacto5);
        contactos.put("Aquaman", contacto6);
+       
+       
+       Publicacion pub0=new Publicacion(Fecha.getFechaActual(),"Hola me llamo Margarita");
+       Publicacion pub1=new Publicacion(Fecha.getFechaActual(),"Busco tienda de disfraces, area Madrid");
+       Publicacion pub6=new Publicacion(Fecha.getFechaActual(),"Busco nuevas experiencias en el area de animacion acuática");
+       
+       publica.add(pub0);
+       
        
        
        
@@ -99,9 +109,13 @@ public class RedProfessional{
             
         
         if("publicaciones".compareTo(var)==0){
+            Iterator<Publicacion>it=publica.listIterator();
+             while(it.hasNext()){
+                 System.out.println(it.next());
             
             
             
+        }
         }
             
                 
@@ -121,8 +135,14 @@ public class RedProfessional{
             String[] var1 = var.split(" ",2);
             texto=var1[1];
             
-            Publicacion public1 = new Publicacion(,);
-            persona.publicar(public1);
+            
+            
+            
+           Publicacion publact=new Publicacion (Fecha.getFechaActual(),texto);
+           publica.add(publact);
+           System.out.println(publact);
+            
+            
             
             
         }
@@ -144,4 +164,4 @@ public class RedProfessional{
         }
     
     }
-}
+    }
