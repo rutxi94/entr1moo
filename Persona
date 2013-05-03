@@ -18,6 +18,13 @@ public class Persona {
     private TreeMap<String,Persona>contactos;
     private ArrayList<Publicacion>publica;
     
+    public Persona(String nombre,String puesto, String empresa){
+       this.nombre=nombre;
+       this.puesto=puesto;
+       this.empresa=empresa;
+       
+    }
+    
     public String getEmpresa(){
         return this.empresa;
     }
@@ -46,9 +53,9 @@ public class Persona {
         return it;
     }
     public String toString(){
-        return "Nom: "+this.nombre+";Puesto: "+this.puesto+";Empresa:"+this.empresa+publica.listIterator();
+        return "Nom: "+this.nombre+"\t\tPuesto: "+this.puesto+"\t\tEmpresa:"+this.empresa;
+        
     }
-    //Crec que aquesta funció lhem de canviar, diria que hem de ficar algo del format while(it.hasnext()) i 
-    //a partir d'aqui anant iterant els elements, no fer-ho aixi a saco.
+    //Falta printar les publicacions.
     
 }
